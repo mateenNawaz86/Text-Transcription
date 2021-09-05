@@ -88,7 +88,7 @@ const Text = (props) => {
         <h2>Your text summary</h2>
         <p>
           {
-            enteredText.split(" ").filter((el) => {
+            enteredText.split(/\s+/).filter((el) => {
               return el.length !== 0;
             }).length
           }{" "}

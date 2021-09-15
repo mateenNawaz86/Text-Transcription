@@ -11,3 +11,7 @@ body {
 .main__container {
   padding-top: 5rem;
 }
+
+.accordion-button::after {
+  filter: invert(1);
+}

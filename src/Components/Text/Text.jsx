@@ -24,6 +24,9 @@ const Text = (props) => {
     setEnteredText(text.join(" "));
   };
 
+  // use for copy the entered text
+  // navigator.clipboard.writeText(enteredText);
+
   return (
     <>
       <h1 style={{ color: props.changeColor === "dark" ? "white" : "black" }}>
@@ -88,7 +91,7 @@ const Text = (props) => {
         <h2>Your text summary</h2>
         <p>
           {
-            enteredText.split(" ").filter((el) => {
+            enteredText.split(/\s+/).filter((el) => {
               return el.length !== 0;
             }).length
           }{" "}
